@@ -27,3 +27,16 @@ docker exec -it cuda_llm bash
 ```
 bash run.sh 
 ```
+
+## GEMM 测试结果
+
+```
+1: Test command: /workspace/cuda_practice/build/test_gemm
+1: Test timeout computed to be: 10000000
+1: my_mul: 0.055548s
+1: cublas: 0.000831s
+1: Accuracy test passed!
+1/1 Test #1: test_gemm ........................   Passed    1.01 sec
+
+100% tests passed, 0 tests failed out of 1
+```
