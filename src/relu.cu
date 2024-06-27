@@ -22,10 +22,10 @@ __global__ void relu_v2(float* x, float* y, int N) {
     if(idx < N){
         float4 reg_x = FLOAT4(x[idx]);
         float4 reg_y;
-        reg_y.w = reg_x.w;
-        reg_y.x = reg_x.x;
-        reg_y.y = reg_x.y;
-        reg_y.z = reg_x.z;
+        reg_y.x = fmaxf(reg_x.x,0);
+        reg_y.y = fmaxf(reg_x.y,0);
+        reg_y.z = fmaxf(reg_x.z,0);
+        reg_y.w = fmaxf(reg_x.w,0);
         FLOAT4(y[idx]) = reg_y;
     }
 }
