@@ -23,4 +23,5 @@ cmake ..
 # # Build the project
 make
 
-ctest -VV
+# ctest -R test_gemm
+ctest -R test_relu

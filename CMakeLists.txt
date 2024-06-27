@@ -25,6 +25,7 @@ target_compile_options(main PUBLIC $<$<COMPILE_LANGUAGE:CUDA>:--expt-relaxed-con
 # 定义测试文件列表
 set(test_files
     "test_gemm"
+    "test_relu"
 )
 
 # Loop to add tests
@@ -45,3 +46,5 @@ foreach(test_file ${test_files})
     # Add CMake test for each executable
     add_test(NAME ${test_file} COMMAND ${test_file})
 endforeach()
+
+set(CMAKE_CUDA_ARCHITECTURES "sm_60;sm_70;sm_75;sm_80")

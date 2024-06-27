@@ -30,6 +30,7 @@ bash run.sh
 
 ## GEMM 测试结果
 
+### native gemmm
 ```
 1: Test command: /workspace/cuda_practice/build/test_gemm
 1: Test timeout computed to be: 10000000
@@ -39,4 +40,8 @@ bash run.sh
 1/1 Test #1: test_gemm ........................   Passed    1.01 sec
 
 100% tests passed, 0 tests failed out of 1
+```
+
+### gemm with shared mem
+```
 ```
